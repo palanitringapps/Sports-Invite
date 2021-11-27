@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">SportInviteDemo</string>
+    <string name="invite">Invite</string>
+    <string name="current_members">Current Members</string>
+    <string name="limit">Limit</string>
+    <string name="current_supporters">Current Supporters</string>
+    <string name="invite_permissions">Invite Permissions</string>
+    <string name="invite_valid_description">Invite URL are valid for 7 days. Permissions can be changed from the member management view. </string>
+    <string name="what_are_permissions">What are Permissions?</string>
+    <string name="share_qr_code">Share QR Code</string>
+    <string name="copy_link">Copy Link</string>
+    <string name="internet_error">Please check you internet connection</string>
+    <string name="copied">Invite link copied</string>
+    <string name="welcome">Welcome</string>
+    <string name="invite_members">Invite members</string>
+    <string name="qr_code">My QR code</string>
+
+    <string-array name="all_position">
+        <item> Coach </item>
+        <item> Player Coach</item>
+        <item> Player </item>
+        <item> Supporter</item>
+    </string-array>
+
+    <string-array name="position_without_supporters">
+        <item> Coach </item>
+        <item> Player Coach</item>
+        <item> Player </item>
+    </string-array>
+
+    <string-array name="position_only_supporter">
+        <item> Supporter</item>
+    </string-array>
+
+</resources>

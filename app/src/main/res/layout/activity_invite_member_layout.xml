@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCurrentMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/current_members"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMemberLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:text="@string/limit"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@id/tvCurrentMembers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvCurrentMembers" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCurrentSupporters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/current_supporters"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toStartOf="@id/tvCurrentMembers"
+            app:layout_constraintTop_toBottomOf="@id/tvCurrentMembers" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSupporterLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/limit"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@id/tvCurrentSupporters"
+            app:layout_constraintEnd_toEndOf="@id/tvMemberLimit"
+            app:layout_constraintTop_toTopOf="@id/tvCurrentSupporters" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInvitePermissionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/invite_permissions"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="@id/tvCurrentMembers"
+            app:layout_constraintTop_toBottomOf="@id/tvCurrentSupporters" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spInvitePermission"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintEnd_toEndOf="@id/tvMemberLimit"
+            app:layout_constraintStart_toStartOf="@id/tvCurrentMembers"
+            app:layout_constraintTop_toBottomOf="@id/tvInvitePermissionTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInviteDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:gravity="center"
+            android:text="@string/invite_valid_description"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="@id/spInvitePermission"
+            app:layout_constraintStart_toStartOf="@id/spInvitePermission"
+            app:layout_constraintTop_toBottomOf="@id/spInvitePermission" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWhatAre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:gravity="center"
+            android:text="@string/what_are_permissions"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="@id/spInvitePermission"
+            app:layout_constraintStart_toStartOf="@id/spInvitePermission"
+            app:layout_constraintTop_toBottomOf="@id/tvInviteDescription" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareQRCode"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/button_shape_style"
+            android:text="@string/share_qr_code"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/spInvitePermission"
+            app:layout_constraintStart_toStartOf="@id/spInvitePermission"
+            app:layout_constraintTop_toBottomOf="@id/tvWhatAre" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCopyLink"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/button_shape_style"
+            android:text="@string/copy_link"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/spInvitePermission"
+            app:layout_constraintStart_toStartOf="@id/spInvitePermission"
+            app:layout_constraintTop_toBottomOf="@id/btnShareQRCode" />
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginBottom="160dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
